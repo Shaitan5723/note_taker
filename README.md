@@ -3,7 +3,7 @@
 ## Description
 This is a simple note taking application, where users may input their notes that will be saved into a file.
 Users are then able to access the notes whenever they choose to, simply by selecting each note based on its given title.
-![generated_page](/assets/images/note01.png)
+![generated_page](/public/assets/images/note1.png)
 
 This application is deployed on heroku at [this link](https://note-taker-ayx.herokuapp.com/)
 
