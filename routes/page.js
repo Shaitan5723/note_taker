@@ -10,7 +10,7 @@ page.get("/notes", (req,res) => {
 });
 
 // Returns the index.html file
-page.get("*", (req,res) => {
+page.get("/", (req,res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
   console.log("homepage accessed");
 });
