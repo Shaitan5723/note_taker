@@ -4,6 +4,7 @@ const path = require('path');
 const noteRouter = require('./routes/notes');
 const pageRouter = require('./routes/page');
 
+
 // Initialize express
 const PORT = 3001;
 const app = express();
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Require routes file
-app.use('/page', pageRouter);
+app.use('/', pageRouter);
 app.use('/notes', noteRouter);
 
 
