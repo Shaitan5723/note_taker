@@ -1,6 +1,6 @@
 // Dependancies
 const express = require('express');
-const noteRouter = require('./routes/notes');
+const noteRouter = require('./routes/apiRoute');
 const pageRouter = require('./routes/page');
 
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Require routes file
-app.use('/notes', noteRouter);
+app.use('/api', noteRouter);
 app.use('/', pageRouter);
 
 
