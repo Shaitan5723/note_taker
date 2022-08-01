@@ -1,4 +1,4 @@
-// Utility functions writeToFile and readAndAppend
+// Utility functions taken from mini project - Credit BootCamp Staff
 const fs = require('fs');
 const util = require('util');
 

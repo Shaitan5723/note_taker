@@ -1,6 +1,6 @@
 // Dependancies
 const express = require('express');
-const noteRouter = require('./routes/apiRoute');
+const apiRouter = require('./routes/apiRoute');
 const pageRouter = require('./routes/page');
 
 
@@ -14,13 +14,13 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Require routes file
-app.use('/api', noteRouter);
+app.use('/api', apiRouter);
 app.use('/', pageRouter);
 
 
 
 // Setup listener
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`);
 }); 
 

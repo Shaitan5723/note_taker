@@ -2,7 +2,7 @@
 const express = require('express');
 const apiRoute = express.Router();
 const crypto = require('crypto');
-// const fs = require('fs');
+
 const { readFromFile, readAndAppend  } = require('../helpers/utils');
   
 // GET Route for retrieving the notes
@@ -20,19 +20,19 @@ apiRoute.get('/notes', (req, res) => {
 
 
 //Post Route for new notes
-apiRoute.post('/api/notes', (req,res) => {
+apiRoute.post('/notes', (req,res) => {
   // Destructuring assignment for the items in req.body
 const { title, text } = req.body;
-// If all the required properties are present
-if (title && text) {
+
+if (req.body) {
     // Variable for the object we will save
     const newNote = {
       title,
       text,
-      noteId: crypto.randomUUID(),
+      id: crypto.randomUUID(),
     };
 
-    readAndAppend(newNote, '../db/db.json');
+    readAndAppend(newNote, './db/db.json');
     res.json(`Note added successfully`);
   } else {
     res.error('Error');

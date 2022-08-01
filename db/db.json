@@ -1,7 +1,12 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
-        
+        "title": "12314",
+        "text": "141353",
+        "id": "06894883-a480-43ee-b45a-5a2bdc259742"
+    },
+    {
+        "title": "testing",
+        "text": "This is a new note\n",
+        "id": "b2dd44e5-3c9f-4987-8e4e-47a9ea851525"
     }
 ]
