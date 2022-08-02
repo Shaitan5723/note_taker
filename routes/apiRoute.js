@@ -22,9 +22,9 @@ apiRoute.get('/notes', (req, res) => {
 //Post Route for new notes
 apiRoute.post('/notes', (req,res) => {
   // Destructuring assignment for the items in req.body
-const { title, text } = req.body;
+const { title, text} = req.body;
 
-if (req.body) {
+if (title && text) {
     // Variable for the object we will save
     const newNote = {
       title,
@@ -33,13 +33,12 @@ if (req.body) {
     };
 
     readAndAppend(newNote, './db/db.json');
+    console.log(newNote);
+    console.log("New note added");
     res.json(`Note added successfully`);
   } else {
     res.error('Error');
   }
-
-  console.log(newNote);
-  console.log("New note added");
  
  })
 
